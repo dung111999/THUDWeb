@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+		.right{
+			float: right;
+            margin-right: 999px;
+		}
+		.left{
+			float:left;
+		}
+
+        .dem {
+            margin-left: 130px;
+        }
+    </style>
+    <script language="javascript">
+        function dem(){
+          var tu = document.getElementById("tu").value;
+          var vanBan = document.getElementById("vanban").value;
+          var re = new RegExp(tu,'g');
+          console.log(vanBan.match(re).length);  
+        }
+    </script>
+</head>
+<body>
+        <div class="left">
+            Từ<br>
+            <input type="text" id="tu" name="tu"><br><br>
+            <input type = "submit" value = "Dem" class="dem" onclick="return dem()"><br>
+        </div>
+        <div class="right">
+            Văn bản<br>
+            <textarea rows="10" cols = "20" id="vanban" name="vanban"></textarea>
+        </div>
+</body>
+</html>
